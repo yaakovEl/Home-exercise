@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
+import { MyContextUser } from "../MyContext/MyContext";
 
-function Pagetwo(){
+function Pagetwo() {
+  const user = useContext(MyContextUser);
 
-    return(
-
-        <div>
-            Pagetwo
-        </div>
-    )
+  return (
+    <div>
+      Pagetwo
+      <div>user: {user}</div>
+    </div>
+  );
 }
 
 export default Pagetwo;
